@@ -1,0 +1,50 @@
+.marker{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin-left: -115px;
+    border-radius: 50% 50% 50% 0;
+    border: 4px solid #fff;
+    width: 45px;
+    height: 45px;
+    background: #999;
+}
+
+.marker.selected{
+    z-index: 1000;
+    background-color: orangered;
+}
+
+.marker.ledge,
+.marker.mannypad,
+.spot-type.ledge,
+.spot-type.mannypad{
+    background-image: url(../ledge.svg) ; 
+    background-position: center;
+}
+
+.marker.park,
+.spot-type.park{
+    background-image: url(../park.svg);  
+    background-position: center;
+}
+.marker.handrail,
+.spot-type.handrail{
+    background-image: url(../rail.svg);  
+    background-position: center;
+}
+.marker.stairs,
+.spot-type.stairs{
+    background-image: url(../stairs.svg);  
+    background-position: center;
+}
+.marker.banks,
+.spot-type.banks{
+    background-image: url(../bank.svg); 
+    background-position: center;
+}
+.marker.gap,
+.spot-type.gap{
+    background-image: url(../gap.svg);  
+    background-position: center;
+}

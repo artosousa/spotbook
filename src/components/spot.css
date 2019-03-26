@@ -1,0 +1,55 @@
+.spot{
+    -webkit-flex-basis: calc(33.33% - 20px);
+    flex-basis: calc(33.33% - 20px);
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #999;
+    top: 0;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    position: relative;
+    cursor: pointer;
+    
+}
+.spot:hover{
+    opacity: 0.9;
+    box-shadow: 0 0 10px #666;
+    top: -5px;
+}
+.spot-picture{
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 4px;
+    overflow: hidden;
+    height: 200px;
+    background-size: cover;
+    background-position: 50%;
+    background-color: orangered;
+}
+.spot-about,
+.spot-title,
+.spot-metro{
+    padding: 10px;
+}
+
+.spot h2,
+.spot h4{
+    margin: 0px;
+}
+
+.spot h4{
+    font-weight: lighter;
+    color: #999;
+}
+
+.spot-type{
+    float: left;
+    border-radius: 50% 50% 50% 0;
+    border: 4px solid #fff;
+    width: 55px;
+    height: 55px;
+    background: orangered;
+    margin-right: 10px;
+    margin-top: -20px;
+}
