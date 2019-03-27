@@ -12,7 +12,9 @@ class App extends Component {
     super(props);
     this.state = {
       spots: [],
-      selectedSpot: null
+      allSpots: [],
+      selectedSpot: null,
+      search: ""
     };
   }
   
@@ -22,7 +24,8 @@ class App extends Component {
     .then(response => response.json())
     .then((data) => {
       this.setState({
-        spots: data
+        spots: data,
+        allSpots: data
       });
     })
   }
@@ -31,6 +34,13 @@ class App extends Component {
     console.log(spot);
     this.setState({
       selectedSpot: spot
+    })
+  }
+
+  handleSearch = (event) => {
+    this.setState({
+      search: event.target.value,
+      spots: this.state.allSpots.filter((spot) => new RegExp(event.target.value, "i").exec(spot.name + spot.type ))
     })
   }
   render () {
@@ -50,9 +60,21 @@ class App extends Component {
     }
     return(
       <div className="app">
+        <div className="search">
+          <div className="logo">
+            <div className="logo-icon"></div>
+            <h1>Spot Book</h1>
+          </div>
+          <div className="input-container">
+            <input 
+              type="text"
+              placeholder="Search..."
+              value={this.state.search}
+              onChange={this.handleSearch}
+            />
+          </div>
+        </div>
         <div className="main">
-          <div className="search"></div>
-          
           <div className="spots">
             {this.state.spots.map((spot) => {
               return <Spot 

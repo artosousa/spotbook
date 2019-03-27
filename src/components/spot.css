@@ -1,6 +1,6 @@
 .spot{
     -webkit-flex-basis: calc(33.33% - 20px);
-    flex-basis: calc(33.33% - 20px);
+    flex-basis: calc(33.33% - 22px);
     margin: 10px;
     border-radius: 5px;
     box-shadow: 0 0 5px #999;
