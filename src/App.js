@@ -40,7 +40,7 @@ class App extends Component {
   handleSearch = (event) => {
     this.setState({
       search: event.target.value,
-      spots: this.state.allSpots.filter((spot) => new RegExp(event.target.value, "i").exec(spot.name + spot.type ))
+      spots: this.state.allSpots.filter((spot) => new RegExp(event.target.value, "i").exec(spot.name + spot.type + spot.about ))
     })
   }
   render () {
